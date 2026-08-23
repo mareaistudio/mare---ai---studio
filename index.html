@@ -1,0 +1,949 @@
+    <!DOCTYPE html>
+
+<html>
+<head>
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <title>Hello, World!</title>
+</head>
+<body>
+  <h1>
+    Hello, World!
+  </h1>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="am">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>የእኔ ድረ-ገጽ</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f5f7fb;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    /* Navigation */
+    nav {
+      background: #111827;
+      color: white;
+      padding: 18px 7%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 25px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+    }
+
+    nav ul li a:hover {
+      color: #38bdf8;
+    }
+
+    /* Hero */
+    .hero {
+      min-height: 90vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 40px 20px;
+      background:
+        linear-gradient(rgba(17,24,39,.75), rgba(17,24,39,.75)),
+        url("https://images.unsplash.com/photo-1497366754035-f200968a6e72")
+        center/cover;
+      color: white;
+    }
+
+    .hero-content {
+      max-width: 750px;
+    }
+
+    .hero h1 {
+      font-size: 50px;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 20px;
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 28px;
+      background: #0ea5e9;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: .3s;
+    }
+
+    .btn:hover {
+      background: #0284c7;
+      transform: translateY(-2px);
+    }
+
+    /* Sections */
+    section {
+      padding: 80px 7%;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 45px;
+    }
+
+    .section-title h2 {
+      font-size: 35px;
+      margin-bottom: 10px;
+    }
+
+    .section-title p {
+      color: #666;
+    }
+
+    /* Cards */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .card {
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 5px 20px rgba(0,0,0,.08);
+      text-align: center;
+      transition: .3s;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+    }
+
+    .card .icon {
+      font-size: 45px;
+      margin-bottom: 15px;
+    }
+
+    .card h3 {
+      margin-bottom: 12px;
+    }
+
+    /* About */
+    .about {
+      background: white;
+    }
+
+    .about-content {
+      max-width: 800px;
+      margin: auto;
+      text-align: center;
+      font-size: 18px;
+    }
+
+    /* Contact */
+    .contact-form {
+      max-width: 600px;
+      margin: auto;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 15px;
+      margin-bottom: 15px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      font-size: 16px;
+    }
+
+    .contact-form textarea {
+      height: 150px;
+      resize: none;
+    }
+
+    .contact-form button {
+      width: 100%;
+      border: none;
+      cursor: pointer;
+      font-size: 17px;
+    }
+
+    /* Footer */
+    footer {
+      background: #111827;
+      color: white;
+      text-align: center;
+      padding: 25px;
+    }
+
+    /* Mobile */
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      nav ul {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .hero h1 {
+        font-size: 36px;
+      }
+
+      .hero p {
+        font-size: 17px;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      section {
+        padding: 60px 5%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="logo">🌟 የእኔ Website</div>
+
+    <ul>
+      <li><a href="#home">መነሻ</a></li>
+      <li><a href="#services">አገልግሎት</a></li>
+      <li><a href="#about">ስለእኛ</a></li>
+      <li><a href="#contact">ያግኙን</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <h1>እንኳን ወደ ድረ-ገጻችን በደህና መጡ!</h1>
+
+      <p>
+        ይህ ዘመናዊ፣ ፈጣን እና ለሞባይል የሚስማማ
+        የWebsite መነሻ ገጽ ነው።
+      </p>
+
+      <a href="#services" class="btn">ተጨማሪ ይመልከቱ</a>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services">
+    <div class="section-title">
+      <h2>አገልግሎቶቻችን</h2>
+      <p>የምንሰጣቸውን አገልግሎቶች ይመልከቱ</p>
+    </div>
+
+    <div class="cards">
+
+      <div class="card">
+        <div class="icon">💻</div>
+        <h3>Website Design</h3>
+        <p>
+          ዘመናዊ እና ለሞባይል የሚስማማ Website እንሰራለን።
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">🎬</div>
+        <h3>AI Video</h3>
+        <p>
+          AI በመጠቀም አስደናቂ የቪዲዮ ይዘቶችን መፍጠር ይቻላል።
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">🎨</div>
+        <h3>Creative Design</h3>
+        <p>
+          ለእርስዎ የሚስማማ የፈጠራ ዲዛይን እንዘጋጃለን።
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="about" id="about">
+
+    <div class="section-title">
+      <h2>ስለእኛ</h2>
+    </div>
+
+    <div class="about-content">
+      <p>
+        ይህ Website እንደ መነሻ የተዘጋጀ ሲሆን፣
+        በኋላ የእርስዎን ስም፣ ሎጎ፣ ምስሎች፣
+        ቪዲዮዎች እና ሌሎች ባህሪያት መጨመር ይቻላል።
+      </p>
+    </div>
+
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+
+    <div class="section-title">
+      <h2>ያግኙን</h2>
+      <p>መልዕክትዎን ይላኩልን</p>
+    </div>
+
+    <form class="contact-form" onsubmit="sendMessage(event)">
+
+      <input
+        type="text"
+        id="name"
+        placeholder="ስምዎ"
+        required
+      >
+
+      <input
+        type="email"
+        id="email"
+        placeholder="ኢሜይልዎ"
+        required
+      >
+
+      <textarea
+        id="message"
+        placeholder="መልዕክትዎን ይጻፉ..."
+        required
+      ></textarea>
+
+      <button class="btn" type="submit">
+        መልዕክት ላክ
+      </button>
+
+    </form>
+
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2026 የእኔ Website — All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    function sendMessage(event) {
+      event.preventDefault();
+
+      const name = document.getElementById("name").value;
+
+      alert("እናመሰግናለን " + name + "። መልዕክትዎ ተቀብለናል!");
+
+      document.querySelector(".contact-form").reset();
+    }
+  </script>
+
+</body>
+</html>!DOCTYPE html>
+<html lang="am">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Mare AI Studio</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #080b16;
+      color: white;
+    }
+
+    /* NAVBAR */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 7%;
+      background: rgba(8, 11, 22, 0.95);
+      border-bottom: 1px solid #20263a;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .logo span {
+      color: #8b5cf6;
+    }
+
+    nav ul {
+      display: flex;
+      gap: 25px;
+      list-style: none;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #a78bfa;
+    }
+
+    /* HERO */
+    .hero {
+      min-height: 90vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 50px 20px;
+
+      background:
+        radial-gradient(circle at top, #312e81, transparent 45%),
+        #080b16;
+    }
+
+    .hero-content {
+      max-width: 850px;
+    }
+
+    .hero h1 {
+      font-size: 60px;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 span {
+      color: #a78bfa;
+    }
+
+    .hero p {
+      color: #cbd5e1;
+      font-size: 20px;
+      margin-bottom: 35px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 28px;
+      margin: 7px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: bold;
+      background: #7c3aed;
+      color: white;
+      border: none;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+      background: #8b5cf6;
+    }
+
+    .btn-outline {
+      background: transparent;
+      border: 1px solid #8b5cf6;
+    }
+
+    /* SECTIONS */
+    section {
+      padding: 90px 7%;
+    }
+
+    .title {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .title h2 {
+      font-size: 38px;
+      margin-bottom: 10px;
+    }
+
+    .title p {
+      color: #94a3b8;
+    }
+
+    /* AI VIDEO */
+    .video-box {
+      max-width: 900px;
+      margin: auto;
+      background: #111827;
+      padding: 20px;
+      border-radius: 20px;
+      border: 1px solid #293249;
+    }
+
+    .video-preview {
+      height: 430px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      border-radius: 15px;
+
+      background:
+        linear-gradient(135deg, #312e81, #111827);
+    }
+
+    .play {
+      font-size: 70px;
+    }
+
+    .video-info {
+      padding: 20px 5px 5px;
+    }
+
+    .video-info h3 {
+      margin-bottom: 8px;
+    }
+
+    .video-info p {
+      color: #94a3b8;
+    }
+
+    /* GALLERY */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .gallery-card {
+      height: 230px;
+      border-radius: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 55px;
+      background: linear-gradient(135deg, #4c1d95, #172554);
+      border: 1px solid #293249;
+      transition: 0.3s;
+    }
+
+    .gallery-card:hover {
+      transform: scale(1.03);
+    }
+
+    /* ABOUT */
+    .about {
+      background: #0d1220;
+    }
+
+    .about-text {
+      max-width: 800px;
+      margin: auto;
+      text-align: center;
+      color: #cbd5e1;
+      font-size: 18px;
+      line-height: 1.9;
+    }
+
+    /* CONTACT */
+    .contact-form {
+      max-width: 650px;
+      margin: auto;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 15px;
+      margin-bottom: 15px;
+      border-radius: 10px;
+      border: 1px solid #293249;
+      background: #111827;
+      color: white;
+      outline: none;
+    }
+
+    .contact-form textarea {
+      height: 150px;
+      resize: none;
+    }
+
+    .contact-form button {
+      width: 100%;
+    }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 30px;
+      background: #05070e;
+      color: #94a3b8;
+    }
+
+    /* MOBILE */
+    @media (max-width: 768px) {
+
+      nav {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      nav ul {
+        gap: 12px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .hero h1 {
+        font-size: 42px;
+      }
+
+      .hero p {
+        font-size: 17px;
+      }
+
+      .gallery {
+        grid-template-columns: 1fr;
+      }
+
+      .video-preview {
+        height: 260px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+  <nav>
+
+    <div class="logo">
+      ✨ <span>Mare</span> AI Studio
+    </div>
+
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#videos">AI Videos</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+
+  </nav>
+
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+
+    <div class="hero-content">
+
+      <h1>
+        Create The Future With
+        <span>AI</span>
+      </h1>
+
+      <p>
+        Welcome to Mare AI Studio — a creative space
+        for AI videos, images and digital creativity.
+      </p>
+
+      <a href="#videos" class="btn">
+        🎬 Watch AI Videos
+      </a>
+
+      <a href="#gallery" class="btn btn-outline">
+        🖼️ Explore Gallery
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- AI VIDEOS -->
+  <section id="videos">
+
+    <div class="title">
+
+      <h2>🎬 AI Videos</h2>
+
+      <p>
+        Explore amazing AI-generated videos
+      </p>
+
+    </div>
+
+    <div class="video-box">
+
+      <!--
+        ከዚህ በታች የራስዎን video file
+        ለመጨመር src="my-video.mp4" ይቀይሩ።
+      -->
+
+      <video
+        controls
+        width="100%"
+        poster=""
+      >
+        <source src="my-video.mp4" type="video/mp4">
+        Your browser does not support video.
+      </video>
+
+      <div class="video-info">
+
+        <h3>My AI Video</h3>
+
+        <p>
+          Created with Mare AI Studio.
+        </p>
+
+        <a
+          href="my-video.mp4"
+          download
+          class="btn"
+        >
+          ⬇️ Download Video
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- GALLERY -->
+  <section id="gallery">
+
+    <div class="title">
+
+      <h2>🖼️ AI Gallery</h2>
+
+      <p>
+        Creative images generated with AI
+      </p>
+
+    </div>
+
+    <div class="gallery">
+
+      <div class="gallery-card">
+        🤖
+      </div>
+
+      <div class="gallery-card">
+        🚀
+      </div>
+
+      <div class="gallery-card">
+        🌌
+      </div>
+
+      <div class="gallery-card">
+        🦁
+      </div>
+
+      <div class="gallery-card">
+        🍎
+      </div>
+
+      <div class="gallery-card">
+        🎨
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+
+    <div class="title">
+
+      <h2>✨ About Mare AI Studio</h2>
+
+    </div>
+
+    <div class="about-text">
+
+      <p>
+        Mare AI Studio is a creative digital platform
+        focused on AI-generated videos, images and
+        innovative digital content.
+      </p>
+
+      <br>
+
+      <p>
+        Our goal is to make AI creativity simple,
+        beautiful and accessible to everyone.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- CONTACT -->
+  <section id="contact">
+
+    <div class="title">
+
+      <h2>📩 Contact Us</h2>
+
+      <p>
+        Send us a message
+      </p>
+
+    </div>
+
+    <form
+      class="contact-form"
+      onsubmit="sendMessage(event)"
+    >
+
+      <input
+        type="text"
+        id="name"
+        placeholder="Your Name"
+        required
+      >
+
+      <input
+        type="email"
+        id="email"
+        placeholder="Your Email"
+        required
+      >
+
+      <textarea
+        id="message"
+        placeholder="Write your message..."
+        required
+      ></textarea>
+
+      <button
+        type="submit"
+        class="btn"
+      >
+        Send Message 🚀
+      </button>
+
+    </form>
+
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer>
+
+    <p>
+      © 2026 Mare AI Studio
+    </p>
+
+    <p>
+      Made with ❤️ and AI
+    </p>
+
+  </footer>
+
+
+  <!-- JAVASCRIPT -->
+  <script>
+
+    function sendMessage(event) {
+
+      event.preventDefault();
+
+      const name =
+        document.getElementById("name").value;
+
+      alert(
+        "Thank you " +
+        name +
+        "! Your message has been received."
+      );
+
+      document
+        .querySelector(".contact-form")
+        .reset();
+    }
+
+  </script>
+
+</body>
+</html>  <h2>About Mare AI Studio</h2>
+
+    <p>
+      Mare AI Studio is a creative AI platform designed
+      to help you create images, videos, stories and
+      other digital content easily.
+    </p>
+
+  </section>
+
+
+  <!-- Footer -->
+  <footer>
+
+    <h3>✦ Mare AI Studio</h3>
+
+    <p>Create. Imagine. Inspire.</p>
+
+    <p class="copyright">
+      © 2026 Mare AI Studio. All rights reserved.
+    </p>
+
+  </footer>
+
+
+  <script src="script.js"></script>
+
+</body>
+</html>
+ 
